@@ -1,5 +1,7 @@
 # Moving Day Search Backend
 
+![screenshot](https://www.alejandroaspinwall.ca/static/7429167ab440b098493c46cdec95a900/80c60/screen.webp)
+
 ## Updated July 2020
 
 The website is live and it runs without the need of this package. Use it as a reference or build something cool with it 😉
