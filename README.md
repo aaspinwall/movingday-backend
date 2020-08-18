@@ -1,5 +1,9 @@
 # Moving Day Search Backend
 
+## Updated July 2020
+
+The website is live and it runs without the need of this package. Use it as a reference or build something cool with it 😉
+
 **Instructions**
 
 Clone this repository and run this command on your terminal.
