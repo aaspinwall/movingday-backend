@@ -4,6 +4,7 @@ const port = process.env.PORT || 5000;
 const bodyParser = require("body-parser");
 const kAPI = require("./kAPI");
 require("dotenv").config();
+const kijiji = require("./kijiji-scraper");
 
 app.use(bodyParser.json());
 
@@ -17,7 +18,11 @@ app.use(function (req, res, next) {
 });
 
 app.get("/host", (req, res) => {
-  res.send(JSON.stringify({ response: true }));
+  res.send(JSON.stringify({ response: "okei" }));
+});
+
+app.get("/one", (req, res) => {
+  res.send(JSON.stringify({ response: "ok" }));
 });
 
 app.post("/search", (req, res) => {
@@ -48,6 +53,7 @@ app.post("/search", (req, res) => {
         return { title, url, description, date, image, images, attributes };
       });
       //Respond with the result
+      console.log("search was successful");
       res.send(JSON.stringify(results));
     };
     searchKijiji(query, res);
@@ -56,6 +62,17 @@ app.post("/search", (req, res) => {
     res.send(JSON.stringify(error));
   }
 });
+
+/* const url = `https://www.kijiji.ca/v-appartement-condo/ville-de-montreal/verdun-apartment-apt-spacieux-et-beau-faute-voir-verdun-apt/1517481942`;
+const scrape = async () => {
+  try {
+    const scraped = await kijiji.Ad.Get(url);
+    console.log(scraped);
+  } catch (error) {
+    console.log(error);
+  }
+};
+scrape(); */
 
 app.listen(port, () =>
   console.log(`Moving Day server listening on port ${port}!`)

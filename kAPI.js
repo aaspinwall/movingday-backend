@@ -1,4 +1,4 @@
-const kijiji = require("kijiji-scraper");
+const kijiji = require("./kijiji-scraper");
 const colors = require("colors");
 
 class Search {
@@ -15,10 +15,14 @@ class Search {
         hasImages: true,
       },
     };
-    console.log("Constructor called".blue);
-    console.log("The query you input is", query);
+    //console.log("Constructor called".blue);
+    //console.log("The query you input is: ", query);
     //Check if the query is valid
-    console.log("queryCheck returned".green, this.queryCheck(query));
+    console.log(
+      "queryCheck returned".green,
+      this.queryCheck(query),
+      "scraping can proceed".green
+    );
     return this.search(this.prepareQuery(query));
 
     //return Promise.resolve(res);
@@ -52,7 +56,12 @@ class Search {
 
   search(query) {
     // Scrape using returned promise
-    return kijiji.search(query.params, query.options);
+    try {
+      return kijiji.search(query.params, query.options);
+    } catch (error) {
+      console.log("////////////ERROR");
+      return error;
+    }
   }
 }
 

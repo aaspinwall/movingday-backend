@@ -1,0 +1,76 @@
+{
+  "_from": "kijiji-scraper@^5.0.3",
+  "_id": "kijiji-scraper@5.0.7",
+  "_inBundle": false,
+  "_integrity": "sha512-LlEo3TbhiQ450ArvVbxJiZTZILxLt+AldULADIX61jzOOUfE8F4tpN1bKWCDLjWPDpZ5bWDo5P370VPTWomY/Q==",
+  "_location": "/kijiji-scraper",
+  "_phantomChildren": {
+    "css-select": "1.2.0",
+    "dom-serializer": "0.1.1",
+    "entities": "1.1.2",
+    "htmlparser2": "3.10.1",
+    "lodash.assignin": "4.2.0",
+    "lodash.bind": "4.2.1",
+    "lodash.defaults": "4.2.0",
+    "lodash.filter": "4.6.0",
+    "lodash.flatten": "4.4.0",
+    "lodash.foreach": "4.5.0",
+    "lodash.map": "4.6.0",
+    "lodash.merge": "4.6.2",
+    "lodash.pick": "4.4.0",
+    "lodash.reduce": "4.6.0",
+    "lodash.reject": "4.6.0",
+    "lodash.some": "4.6.0"
+  },
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "kijiji-scraper@^5.0.3",
+    "name": "kijiji-scraper",
+    "escapedName": "kijiji-scraper",
+    "rawSpec": "^5.0.3",
+    "saveSpec": null,
+    "fetchSpec": "^5.0.3"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/kijiji-scraper/-/kijiji-scraper-5.0.7.tgz",
+  "_shasum": "09721e8d6ee88108405a03a159b2326fe6ef2eb1",
+  "_spec": "kijiji-scraper@^5.0.3",
+  "_where": "/Users/alejandro/WebApps/Projects/movingDay/publicBackend",
+  "author": {
+    "name": "Matt Penny"
+  },
+  "bugs": {
+    "url": "https://github.com/mwpenny/kijiji-scraper/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "cheerio": "^0.22.0",
+    "node-fetch": "~2.2.0"
+  },
+  "deprecated": false,
+  "description": "A scraper for Kijiji ads",
+  "devDependencies": {
+    "jest": "^23.6.0"
+  },
+  "homepage": "https://github.com/mwpenny/kijiji-scraper#readme",
+  "keywords": [
+    "kijiji",
+    "scraper"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "kijiji-scraper",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mwpenny/kijiji-scraper.git"
+  },
+  "scripts": {
+    "test": "jest ./tests/unitTests.spec.js",
+    "test-integration": "jest ./tests/integrationTests.spec.js"
+  },
+  "version": "5.0.7"
+}
